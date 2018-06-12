@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <SocketRocket.h>
+#import <SocketRocket/SocketRocket.h>
 
 @interface ViewController ()
 

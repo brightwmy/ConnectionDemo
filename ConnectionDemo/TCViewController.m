@@ -9,7 +9,7 @@
 
 #import "TCViewController.h"
 
-#import <SRWebSocket.h>
+#import <SocketRocket/SocketRocket.h>
 
 #import "TCChatCell.h"
 
@@ -90,7 +90,10 @@
     _webSocket.delegate = nil;
     [_webSocket close];
 
-    _webSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:@"wss://echo.websocket.org"]];
+    _webSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:
+//                                                   @"wss://echo.websocket.org"
+                                                   @"ws://localhost:9000/chat"
+                                                   ]];
     _webSocket.delegate = self;
 
     self.title = @"Opening Connection...";
@@ -152,6 +155,20 @@
 
     self.title = @"Connection Failed! (see logs)";
     _webSocket = nil;
+}
+
+- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+    
+    NSString *str;
+    if ([message isKindOfClass:NSString.class]) {
+        str = message;
+    } else if ([message isKindOfClass:NSData.class]) {
+        str = [[NSString alloc] initWithData:message encoding:NSUTF8StringEncoding];
+    } else {
+        return;
+    }
+    NSLog(@"Received \"%@\"", str);
+    [self _addMessage:[[TCMessage alloc] initWithMessage:str incoming:YES]];
 }
 
 - (void)webSocket:(SRWebSocket *)webSocket didReceiveMessageWithString:(nonnull NSString *)string

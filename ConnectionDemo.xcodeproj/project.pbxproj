@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2331C7933844EEB9963A8176 /* libPods-ConnectionDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4984FB0B65E6D43912B5409C /* libPods-ConnectionDemo.a */; };
-		A598AB8A4383B7E59A1545D3 /* libPods-ConnectionDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3F3701F8D6FF1F7E5D282E /* libPods-ConnectionDemoTests.a */; };
-		A6272B3304DB552464CF5D4E /* libPods-ConnectionDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70EAF021964339AEF2EA5430 /* libPods-ConnectionDemoUITests.a */; };
+		65C1645465F716BC0AE966CA /* Pods_ConnectionDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C0A0C547F0CBE732E827F /* Pods_ConnectionDemoTests.framework */; };
+		872025D1DF407F80287151B3 /* Pods_ConnectionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4114A8265389110EF67D9B71 /* Pods_ConnectionDemo.framework */; };
 		D7BF07C820CD4E870062701E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BF07C720CD4E870062701E /* AppDelegate.m */; };
 		D7BF07CB20CD4E870062701E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BF07CA20CD4E870062701E /* ViewController.m */; };
 		D7BF07CE20CD4E870062701E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BF07CC20CD4E870062701E /* Main.storyboard */; };
@@ -23,6 +22,7 @@
 		D7F072E720CD600D00D317E8 /* TCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F072E420CD600D00D317E8 /* TCViewController.m */; };
 		D7F072E820CD600D00D317E8 /* TCChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F072E520CD600D00D317E8 /* TCChatCell.m */; };
 		D7F072EB20CD605B00D317E8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7F072E920CD605B00D317E8 /* MainStoryboard.storyboard */; };
+		F30B6673430A83EF9D47078C /* Pods_ConnectionDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D0EF3B2B622ECA296EF9A8 /* Pods_ConnectionDemoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4984FB0B65E6D43912B5409C /* libPods-ConnectionDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConnectionDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4114A8265389110EF67D9B71 /* Pods_ConnectionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53D47E579C6708CCD8D568CD /* Pods-ConnectionDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectionDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectionDemoUITests/Pods-ConnectionDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6264ECAC0FC9162A84CF06C5 /* Pods-ConnectionDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectionDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectionDemoUITests/Pods-ConnectionDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6A3C9224243606CD1D459F2D /* Pods-ConnectionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectionDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectionDemo/Pods-ConnectionDemo.release.xcconfig"; sourceTree = "<group>"; };
-		70EAF021964339AEF2EA5430 /* libPods-ConnectionDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConnectionDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D0EF3B2B622ECA296EF9A8 /* Pods_ConnectionDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectionDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E681949EB664A5F2D9C6B3 /* Pods-ConnectionDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectionDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectionDemoTests/Pods-ConnectionDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BB3F3701F8D6FF1F7E5D282E /* libPods-ConnectionDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConnectionDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4C0A0C547F0CBE732E827F /* Pods_ConnectionDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectionDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BF07C320CD4E870062701E /* ConnectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BF07C620CD4E870062701E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7BF07C720CD4E870062701E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2331C7933844EEB9963A8176 /* libPods-ConnectionDemo.a in Frameworks */,
+				872025D1DF407F80287151B3 /* Pods_ConnectionDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A598AB8A4383B7E59A1545D3 /* libPods-ConnectionDemoTests.a in Frameworks */,
+				65C1645465F716BC0AE966CA /* Pods_ConnectionDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6272B3304DB552464CF5D4E /* libPods-ConnectionDemoUITests.a in Frameworks */,
+				F30B6673430A83EF9D47078C /* Pods_ConnectionDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,9 +109,9 @@
 		34D30D3DFAADB3C1D98C440A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4984FB0B65E6D43912B5409C /* libPods-ConnectionDemo.a */,
-				BB3F3701F8D6FF1F7E5D282E /* libPods-ConnectionDemoTests.a */,
-				70EAF021964339AEF2EA5430 /* libPods-ConnectionDemoUITests.a */,
+				4114A8265389110EF67D9B71 /* Pods_ConnectionDemo.framework */,
+				CE4C0A0C547F0CBE732E827F /* Pods_ConnectionDemoTests.framework */,
+				91D0EF3B2B622ECA296EF9A8 /* Pods_ConnectionDemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -335,9 +335,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ConnectionDemo/Pods-ConnectionDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/SocketRocket/SocketRocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketRocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -667,10 +672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V332RPGP8U;
 				INFOPLIST_FILE = ConnectionDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.p1.ConnectionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -685,10 +687,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V332RPGP8U;
 				INFOPLIST_FILE = ConnectionDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.p1.ConnectionDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -702,11 +701,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectionDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.p1.ConnectionDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -721,11 +716,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectionDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.p1.ConnectionDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -739,11 +730,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectionDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.p1.ConnectionDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -757,11 +744,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ConnectionDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.p1.ConnectionDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
