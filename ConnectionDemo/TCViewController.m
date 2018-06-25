@@ -92,7 +92,7 @@
 
     _webSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:
 //                                                   @"wss://echo.websocket.org"
-                                                   @"ws://localhost:9000/chat"
+                                                   @"ws://10.192.241.38:9000/chat"
                                                    ]];
     _webSocket.delegate = self;
 

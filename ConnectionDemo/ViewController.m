@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <SocketRocket/SocketRocket.h>
 
+#import <CocoaAsyncSocket/GCDAsyncSocket.h>
+
 @interface ViewController ()
 
 @end
