@@ -10,7 +10,7 @@
 package main
 
 import (
-	"golang.org/x/net/websocket"
+	"github.com/gorilla/websocket"
 	"net/http"
 )
 
