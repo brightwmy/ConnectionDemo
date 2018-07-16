@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		65C1645465F716BC0AE966CA /* Pods_ConnectionDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C0A0C547F0CBE732E827F /* Pods_ConnectionDemoTests.framework */; };
 		872025D1DF407F80287151B3 /* Pods_ConnectionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4114A8265389110EF67D9B71 /* Pods_ConnectionDemo.framework */; };
+		D73ACA1120FC9CC3003FE66C /* WebSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73ACA1020FC9CC3003FE66C /* WebSocketViewController.m */; };
 		D7BF07C820CD4E870062701E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BF07C720CD4E870062701E /* AppDelegate.m */; };
-		D7BF07CB20CD4E870062701E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BF07CA20CD4E870062701E /* ViewController.m */; };
+		D7BF07CB20CD4E870062701E /* AsyncSocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7BF07CA20CD4E870062701E /* AsyncSocketViewController.m */; };
 		D7BF07CE20CD4E870062701E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7BF07CC20CD4E870062701E /* Main.storyboard */; };
 		D7BF07D120CD4E870062701E /* ConnectionDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7BF07CF20CD4E870062701E /* ConnectionDemo.xcdatamodeld */; };
 		D7BF07D320CD4E880062701E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7BF07D220CD4E880062701E /* Assets.xcassets */; };
@@ -50,11 +51,13 @@
 		91D0EF3B2B622ECA296EF9A8 /* Pods_ConnectionDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectionDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E681949EB664A5F2D9C6B3 /* Pods-ConnectionDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConnectionDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ConnectionDemoTests/Pods-ConnectionDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE4C0A0C547F0CBE732E827F /* Pods_ConnectionDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConnectionDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73ACA0F20FC9CC3003FE66C /* WebSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketViewController.h; sourceTree = "<group>"; };
+		D73ACA1020FC9CC3003FE66C /* WebSocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSocketViewController.m; sourceTree = "<group>"; };
 		D7BF07C320CD4E870062701E /* ConnectionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConnectionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7BF07C620CD4E870062701E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D7BF07C720CD4E870062701E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D7BF07C920CD4E870062701E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D7BF07CA20CD4E870062701E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D7BF07C920CD4E870062701E /* AsyncSocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncSocketViewController.h; sourceTree = "<group>"; };
+		D7BF07CA20CD4E870062701E /* AsyncSocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncSocketViewController.m; sourceTree = "<group>"; };
 		D7BF07CD20CD4E870062701E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7BF07D020CD4E870062701E /* ConnectionDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConnectionDemo.xcdatamodel; sourceTree = "<group>"; };
 		D7BF07D220CD4E880062701E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,14 +166,16 @@
 				D7F072E420CD600D00D317E8 /* TCViewController.m */,
 				D7BF07C620CD4E870062701E /* AppDelegate.h */,
 				D7BF07C720CD4E870062701E /* AppDelegate.m */,
-				D7BF07C920CD4E870062701E /* ViewController.h */,
-				D7BF07CA20CD4E870062701E /* ViewController.m */,
+				D7BF07C920CD4E870062701E /* AsyncSocketViewController.h */,
+				D7BF07CA20CD4E870062701E /* AsyncSocketViewController.m */,
 				D7BF07CC20CD4E870062701E /* Main.storyboard */,
 				D7BF07D220CD4E880062701E /* Assets.xcassets */,
 				D7BF07D420CD4E880062701E /* LaunchScreen.storyboard */,
 				D7BF07D720CD4E880062701E /* Info.plist */,
 				D7BF07D820CD4E880062701E /* main.m */,
 				D7BF07CF20CD4E870062701E /* ConnectionDemo.xcdatamodeld */,
+				D73ACA0F20FC9CC3003FE66C /* WebSocketViewController.h */,
+				D73ACA1020FC9CC3003FE66C /* WebSocketViewController.m */,
 			);
 			path = ConnectionDemo;
 			sourceTree = "<group>";
@@ -489,7 +494,8 @@
 			files = (
 				D7F072E820CD600D00D317E8 /* TCChatCell.m in Sources */,
 				D7F072E620CD600D00D317E8 /* TCAppDelegate.m in Sources */,
-				D7BF07CB20CD4E870062701E /* ViewController.m in Sources */,
+				D73ACA1120FC9CC3003FE66C /* WebSocketViewController.m in Sources */,
+				D7BF07CB20CD4E870062701E /* AsyncSocketViewController.m in Sources */,
 				D7BF07C820CD4E870062701E /* AppDelegate.m in Sources */,
 				D7F072E720CD600D00D317E8 /* TCViewController.m in Sources */,
 				D7BF07D920CD4E880062701E /* main.m in Sources */,

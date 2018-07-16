@@ -8,9 +8,7 @@
 //
 
 #import "TCViewController.h"
-
 #import <SocketRocket/SocketRocket.h>
-
 #import "TCChatCell.h"
 
 @interface TCMessage : NSObject
@@ -93,7 +91,7 @@
     _webSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:
 //                                                   @"wss://echo.websocket.org"
 //                                                   @"ws://10.192.241.38:9000/chat"
-                                                   @"ws://10.192.240.231:8080/ws"
+                                                   @"ws://106.75.115.36:8080/ws"
                                                    ]];
     _webSocket.delegate = self;
 

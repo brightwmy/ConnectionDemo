@@ -6,27 +6,28 @@
 //  Copyright © 2018 OMI. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <SocketRocket/SocketRocket.h>
-
+#import "AsyncSocketViewController.h"
 #import <CocoaAsyncSocket/GCDAsyncSocket.h>
 
-@interface ViewController ()
+@interface AsyncSocketViewController () <GCDAsyncSocketDelegate>
+
+@property (nonatomic) GCDAsyncSocket *socket;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
-@implementation ViewController
+@implementation AsyncSocketViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)reconnect:(id)sender {
+    
 }
-
 
 @end

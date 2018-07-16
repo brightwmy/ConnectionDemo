@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Keh-MW-f2u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Async Socket View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AsyncSocketViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M0r-5M-ZuT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Hpr-hI-qpV"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Shg-d4-IVo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M0r-5M-ZuT" secondAttribute="bottom" id="ETq-ht-BPT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M0r-5M-ZuT" secondAttribute="trailing" id="IVS-jt-0mm"/>
+                            <constraint firstItem="M0r-5M-ZuT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PNt-eg-K6d"/>
+                            <constraint firstItem="M0r-5M-ZuT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pgs-3l-hTO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="NwS-GF-ypv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0Bz-PZ-QSJ">
+                            <connections>
+                                <action selector="reconnect:" destination="BYZ-38-t0r" id="djM-PI-Fqx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="M0r-5M-ZuT" id="GTx-rh-XVn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1687.2" y="62.518740629685162"/>
+        </scene>
+        <!--WebSocket-->
+        <scene sceneID="pqL-86-ttY">
+            <objects>
+                <viewController id="PUl-RH-qaZ" customClass="WebSocketViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tjl-7x-PgO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wvo-a1-zQx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WebSocket" id="3Ie-nd-Iv2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wk9-Wl-fqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="736"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xa2-1E-sc3">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Keh-MW-f2u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KeN-m3-Abl">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NeL-Vx-EcA" kind="relationship" relationship="viewControllers" id="Xei-mr-wLR"/>
+                        <segue destination="PUl-RH-qaZ" kind="relationship" relationship="viewControllers" id="A4v-cd-UUY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ap-EI-tyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="256"/>
+        </scene>
+        <!--AsyncSocket-->
+        <scene sceneID="pKX-AR-CbW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NeL-Vx-EcA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="AsyncSocket" id="yIC-9c-bM0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="upy-5N-KWp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B5A-rd-jCs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfF-HS-Re2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="62.518740629685162"/>
         </scene>
     </scenes>
 </document>
