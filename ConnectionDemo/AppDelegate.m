@@ -25,6 +25,9 @@ static const int ddLogLevel = 0;
 
 #define READ_HEADER_LINE_BY_LINE 0
 
+
+NSString * const kDeviceID = @"kDeviceID";
+
 @interface AppDelegate () <GCDAsyncSocketDelegate>
 
 @end
@@ -38,6 +41,27 @@ static const int ddLogLevel = 0;
     // Override point for customization after application launch.
     
 //    [self startSocket];
+    
+    NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+
+    NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:appName withExtension:@"momd"]];
+    
+    NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:model];
+    
+    NSURL *sqliteURL = [[[[NSFileManager defaultManager]
+                          URLsForDirectory:NSDocumentDirectory
+                          inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.sqlite", appName]];
+    
+    [coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:nil error:nil];
+    
+    self.mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    self.mainContext.persistentStoreCoordinator = coordinator;
+    self.backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    self.backgroundContext.persistentStoreCoordinator = coordinator;
+    
+    if (![[NSUserDefaults standardUserDefaults] stringForKey:kDeviceID]) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSUUID UUID].UUIDString forKey:kDeviceID];
+    }
     
     return YES;
 }

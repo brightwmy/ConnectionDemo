@@ -13,5 +13,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic) NSManagedObjectContext *mainContext;
+@property (nonatomic) NSManagedObjectContext *backgroundContext;
+
 @end
 
